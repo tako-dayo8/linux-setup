@@ -21,8 +21,15 @@ fi
 
 echo "Your select options: $choice"
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/lib/git-setup.sh"
+
 if [[ "$choice" == *0* ]]; then
 	echo "Running setup all..."
 fi
 
+if [[ "$choice" == *1* ]]; then
+	echo "Running setup Git..."
+	setup-git
+fi
 
