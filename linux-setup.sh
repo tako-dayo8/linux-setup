@@ -21,3 +21,8 @@ fi
 
 echo "Your select options: $choice"
 
+if [[ "$choice" == *0* ]]; then
+	echo "Running setup all..."
+fi
+
+
